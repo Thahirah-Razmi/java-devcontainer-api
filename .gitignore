@@ -1,0 +1,19 @@
+# Environment variables
+.env
+
+# Java build output
+target/
+
+# IDE files
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
