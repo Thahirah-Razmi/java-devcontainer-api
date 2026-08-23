@@ -27,3 +27,6 @@ Thumbs.db
 .classpath
 .project
 .settings/
+
+.venv/
+site/

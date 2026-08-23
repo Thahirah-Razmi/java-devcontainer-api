@@ -1,11 +1,9 @@
 {
     "name": "Java 21 Development Environment",
-
     "build": {
         "dockerfile": "Dockerfile",
         "context": ".."
     },
-
     "customizations": {
         "vscode": {
             "extensions": [
@@ -14,10 +12,10 @@
             ]
         }
     },
-
     "forwardPorts": [
-        8080
+        8080,
+        8000
     ],
-
+    "postCreateCommand": "python3 -m venv .venv && .venv/bin/pip install mkdocs",
     "remoteUser": "developer"
 }
