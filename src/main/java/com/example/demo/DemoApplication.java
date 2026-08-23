@@ -19,5 +19,10 @@ public class DemoApplication {
         public String hello() {
             return "Hello from my Java Dev Container!";
         }
+
+        @GetMapping("/api/health")
+        public String health() {
+            return "Application is running";
+        }
     }
 }

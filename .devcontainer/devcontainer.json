@@ -2,13 +2,15 @@
     "name": "Java 21 Development Environment",
 
     "build": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile",
+        "context": ".."
     },
 
     "customizations": {
         "vscode": {
             "extensions": [
-                "vscjava.vscode-java-pack"
+                "vscjava.vscode-java-pack",
+                "vmware.vscode-boot-dev-pack"
             ]
         }
     },
@@ -17,5 +19,5 @@
         8080
     ],
 
-    "remoteUser": "root"
+    "remoteUser": "developer"
 }
