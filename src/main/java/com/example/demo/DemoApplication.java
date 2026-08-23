@@ -20,6 +20,11 @@ public class DemoApplication {
             return "Hello from my Java Dev Container!";
         }
 
+        @GetMapping("/api/info")
+        public String info() {
+            return "Java Dev Container API - Java 21 - Spring Boot";
+        }
+
         @GetMapping("/api/health")
         public String health() {
             return "Application is running";
