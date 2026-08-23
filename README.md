@@ -111,7 +111,7 @@ Returns a greeting message from the Java Dev Container API.
 
 ### GET /api/info
 
-Returns information about the application and its technology stack.
+Returns basic application information including the runtime and framework.
 
 Example response:
 
