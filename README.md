@@ -103,6 +103,20 @@ Expected response:
 Hello from my Java Dev Container!
 ```
 
+## API Endpoints
+
+### GET /api/hello
+
+Returns a greeting message.
+
+### GET /api/info
+
+Returns basic information about the application.
+
+Example response:
+
+Java Dev Container API - Java 21 - Spring Boot
+
 ## Environment Configuration
 
 Copy `.env.example` to `.env` and update the values when required.

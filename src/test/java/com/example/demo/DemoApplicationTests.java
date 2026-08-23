@@ -32,6 +32,7 @@ class DemoApplicationTests {
         assertEquals(200, response.getStatusCode().value());
         assertEquals(
                 "Hello from my Java Dev Container!",
+                response.getBody());
                 response.getBody()
         );
     }
@@ -40,6 +41,14 @@ class DemoApplicationTests {
     void infoEndpointReturnsExpectedMessage() {
         String url = "http://localhost:" + port + "/api/info";
 
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+
+        assertEquals(200, response.getStatusCode().value());
+        assertEquals(
+                "java-devcontainer-api - Java 21 - Spring Boot",
+                response.getBody());
+    }
+}
         ResponseEntity<String> response =
                 restTemplate.getForEntity(url, String.class);
 
