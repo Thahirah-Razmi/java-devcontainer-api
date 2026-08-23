@@ -107,11 +107,11 @@ Hello from my Java Dev Container!
 
 ### GET /api/hello
 
-Returns a greeting message.
+Returns a greeting message from the Java Dev Container API.
 
 ### GET /api/info
 
-Returns basic information about the application.
+Returns information about the application and its technology stack.
 
 Example response:
 
