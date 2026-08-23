@@ -45,4 +45,16 @@ class DemoApplicationTests {
                                 "java-devcontainer-api - Java 21 - Spring Boot",
                                 response.getBody());
         }
+
+        @Test
+        void failureEndpointReturnsGenericErrorMessage() {
+                String url = "http://localhost:" + port + "/api/failure";
+
+                ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+
+                assertEquals(500, response.getStatusCode().value());
+                assertEquals(
+                                "An error occurred while processing the request.",
+                                response.getBody());
+        }
 }
