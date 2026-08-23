@@ -1,8 +1,6 @@
-# Task
-
 ---
 name: Task
-about: One unit of work — small enough to merge in a day or two
+about: Create a task for this project
 title: ''
 labels: ''
 assignees: ''
