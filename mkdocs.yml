@@ -1,0 +1,22 @@
+site_name: Java Dev Container API Documentation
+
+docs_dir: docs
+
+nav:
+  - Home: index.md
+  - Tutorial:
+      - Getting Started: tutorial/getting-started.md
+  - How-to:
+      - Configure Environment: how-to/configure-environment.md
+  - Reference:
+      - API: reference/api.md
+      - Configuration: reference/configuration.md
+      - Prerequisites: reference/prerequisites.md
+      - Technologies: reference/technologies.md
+      - License: reference/license.md
+  - Explanation:
+      - Overview: explanation/overview.md
+      - Project Structure: explanation/project-structure.md
+      - Development Environment: explanation/development-environment.md
+  - Architecture:
+      - ADR 0001: adr/0001-use-dev-container.md
