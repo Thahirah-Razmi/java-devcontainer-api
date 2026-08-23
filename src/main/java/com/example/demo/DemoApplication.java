@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.config.AppConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,9 +17,15 @@ public class DemoApplication {
     @RestController
     static class HelloController {
 
+        private final AppConfig appConfig;
+
+        HelloController(AppConfig appConfig) {
+            this.appConfig = appConfig;
+        }
+
         @GetMapping("/api/hello")
         public String hello() {
-            return "Hello from my Java Dev Container!";
+            return appConfig.getGreeting();
         }
 
         @Value("${spring.application.name}")
