@@ -35,4 +35,18 @@ class DemoApplicationTests {
                 response.getBody()
         );
     }
+
+    @Test
+    void infoEndpointReturnsExpectedMessage() {
+        String url = "http://localhost:" + port + "/api/info";
+
+        ResponseEntity<String> response =
+                restTemplate.getForEntity(url, String.class);
+
+        assertEquals(200, response.getStatusCode().value());
+        assertEquals(
+                "Java Dev Container API - Java 21 - Spring Boot",
+                response.getBody()
+        );
+    }
 }
