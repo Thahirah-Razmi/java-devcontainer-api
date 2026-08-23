@@ -12,37 +12,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class DemoApplicationTests {
 
-        @LocalServerPort
-        private int port;
+    @LocalServerPort
+    private int port;
 
-        @Autowired
-        private TestRestTemplate restTemplate;
+    @Autowired
+    private TestRestTemplate restTemplate;
 
-        @Test
-        void contextLoads() {
-        }
+    @Test
+    void contextLoads() {
+    }
 
-        @Test
-        void helloEndpointReturnsExpectedMessage() {
-                String url = "http://localhost:" + port + "/api/hello";
+    @Test
+    void helloEndpointReturnsExpectedMessage() {
+        String url = "http://localhost:" + port + "/api/hello";
 
-                ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
-                assertEquals(200, response.getStatusCode().value());
-                assertEquals(
-                                "Hello from my Java Dev Container!",
-                                response.getBody());
-        }
+        assertEquals(200, response.getStatusCode().value());
+        assertEquals(
+                "Hello from my Java Dev Container!",
+                response.getBody());
+    }
 
-        @Test
-        void infoEndpointReturnsExpectedMessage() {
-                String url = "http://localhost:" + port + "/api/info";
+    @Test
+    void infoEndpointReturnsExpectedMessage() {
+        String url = "http://localhost:" + port + "/api/info";
 
-                ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
-                assertEquals(200, response.getStatusCode().value());
-                assertEquals(
-                                "java-devcontainer-api - Java 21 - Spring Boot",
-                                response.getBody());
-        }
+        assertEquals(200, response.getStatusCode().value());
+        assertEquals(
+                "java-devcontainer-api - Java 21 - Spring Boot",
+                response.getBody());
+    }
 }
