@@ -19,3 +19,14 @@ Clone the repository:
 ```bash
 git clone <your-repository-url>
 cd java-devcontainer-api
+```
+
+## Pre-commit Hooks
+
+Install the repository's Git hooks after cloning:
+
+```bash
+pre-commit install
+```
+
+Every contributor must run this command once in each clone because Git hooks are stored locally in `.git/hooks` and are not version controlled.
